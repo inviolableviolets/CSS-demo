@@ -1,0 +1,89 @@
+.gallery {
+  margin: 5em 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: auto;
+  width: 100%;
+
+  h2 {
+    font-size: 5em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: white;
+    font-weight: 100;
+    text-shadow: 0 0 10px white;
+  }
+
+  .stroke {
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    text-shadow: none;
+  }
+
+  span {
+    width: 10rem;
+    height: 2rem;
+    background-color: #fff;
+    transform: translateY(-10rem);
+    box-shadow: (
+      0 2rem rgba(255, 255, 255, 0.9),
+      0 4rem rgba(255, 255, 255, 0.8),
+      0 6rem rgba(255, 255, 255, 0.7),
+      0 8rem rgba(255, 255, 255, 0.6),
+      0 10rem rgba(255, 255, 255, 0.5),
+      0 12rem rgba(255, 255, 255, 0.4),
+      0 14rem rgba(255, 255, 255, 0.3),
+      0 16rem rgba(255, 255, 255, 0.2),
+      0 18rem rgba(255, 255, 255, 0.1),
+      0 20rem rgba(255, 255, 255, 0.05)
+    );
+  }
+
+  section {
+    filter: blur(100px) brightness(2);
+    display: flex;
+    margin: 5em 0;
+    height: 500px;
+    width: 500px;
+    border: 1em solid white;
+    transition: all 2s;
+
+    overflow: scroll hidden;
+    scroll-snap-type: x mandatory;
+
+    div {
+      flex-shrink: 0;
+      height: 500px;
+      width: 500px;
+      background-size: cover;
+      filter: grayscale(100%) contrast(120%);
+      scroll-snap-align: center;
+    }
+
+    .slide1 {
+      background-image: url('https://scontent-mad2-1.xx.fbcdn.net/v/t1.18169-9/11750643_744833835642603_3180896174532253401_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=730e14&_nc_ohc=G-5mp7ycv7wAX9YwKUH&_nc_oc=AQkvEveaoZ40-zjbwDbw-iyiT1tVvTGg9PG75fu5mOzkPI9rH-bqkgkBpATiu4ZPHHI&_nc_ht=scontent-mad2-1.xx&oh=00_AfCCGlRpcYdZbXN6Wni6O9asIb8IGOY9C953beczhjYw0g&oe=65100A40');
+    }
+    .slide2 {
+      background-image: url('https://scontent-mad1-1.xx.fbcdn.net/v/t1.18169-9/11701235_744833832309270_8775449520805413015_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=730e14&_nc_ohc=zSP7H7RgUXEAX9X1ytO&_nc_ht=scontent-mad1-1.xx&oh=00_AfAXyTODZiWigIijIlRFOrbq60rFf0bBYUR1lFX0XFXk-w&oe=650FDF6D');
+    }
+    .slide3 {
+      background-image: url('https://scontent-mad1-1.xx.fbcdn.net/v/t1.18169-9/11737979_744833818975938_2823448474702457686_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=730e14&_nc_ohc=9Rbjz_HrHv0AX88GinA&_nc_ht=scontent-mad1-1.xx&oh=00_AfDoG4w4xpCDqSD-ItMtayYra5BQuMtz0Q6CUTcKWPflhA&oe=65100FC8');
+    }
+  }
+
+  section::-webkit-scrollbar {
+    background-color: transparent;
+    height: 1em;
+  }
+
+  section::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.6);
+  }
+
+  section:hover {
+    transform: scale(1.02);
+    filter: blur(0);
+    transition: all 2s;
+  }
+}

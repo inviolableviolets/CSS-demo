@@ -1,0 +1,116 @@
+.blend {
+  display: grid;
+  place-items: center;
+  position: relative;
+  margin: 3em 0;
+
+  .blended-text {
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    height: 10em;
+
+    span {
+      text-align: left;
+      font-size: 4.5em;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+
+      mix-blend-mode: difference;
+    }
+  }
+
+  .blended-text::before {
+    content: '';
+    position: absolute;
+    height: 10em;
+    width: 0em;
+    left: 0;
+    animation: slide-rl 3s backwards infinite, bg-blend 9s steps(1) infinite;
+  }
+
+  .blended-image {
+    position: relative;
+    display: flex;
+    transform: translate(6em);
+    border-radius: 50%;
+    height: 20rem;
+    aspect-ratio: 1/1;
+
+    text-transform: uppercase;
+    color: black;
+    display: grid;
+    place-content: center;
+    box-shadow: 0 0 100px white;
+
+    border: 1em solid white;
+
+    background-color: rgb(56, 105, 103);
+
+    background-image: url('https://www.providencejournal.com/gcdn/authoring/2018/05/04/NPRJ/ghows-PJ-6b687f15-ddfb-2b63-e053-0100007f2d77-c9d8700f.jpeg?width=660&height=494&fit=crop&format=pjpg&auto=webp');
+    background-position: -5em 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-blend-mode: overlay;
+
+    animation: expand 1s infinite;
+    animation-delay: 0.5s, 5s;
+    animation-iteration-count: infinite;
+
+    filter: grayscale(100%) contrast(120%);
+  }
+
+  .blended-image::after {
+    content: 'brother from an otter mother';
+    position: absolute;
+    opacity: 0;
+    padding: 5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    letter-spacing: 0.2em;
+    display: grid;
+    place-items: center;
+    color: white;
+    inset: 0;
+    z-index: 6;
+    transition: all 0.5s;
+  }
+
+  .blended-image:active::after {
+    opacity: 1;
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.4)
+    );
+  }
+
+  @keyframes slide-rl {
+    0% {
+      width: 0;
+    }
+    50% {
+      width: 80%;
+    }
+  }
+
+  @keyframes bg-blend {
+    0% {
+      background-color: white;
+    }
+    33% {
+      background-color: black;
+    }
+    66% {
+      background: linear-gradient(
+        to top,
+        white 0%,
+        white 50%,
+        black 50%,
+        black 100%
+      );
+    }
+  }
+}
