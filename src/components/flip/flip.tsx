@@ -2,15 +2,15 @@ import style from './flip.module.scss';
 
 export default function Flip() {
   return (
-    <div className={style['flip-container']}>
+    <a className={style['flip-container']} href="#parriba" id="pabajo">
       <div className={style.card}>
         <div className={style.front}>
-          <p>A</p>
+          <p>↑</p>
         </div>
         <div className={style.back}>
-          <p>B</p>
+          <p>Go back up</p>
         </div>
       </div>
-    </div>
+    </a>
   );
 }

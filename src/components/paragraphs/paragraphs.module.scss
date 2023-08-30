@@ -3,7 +3,7 @@
   justify-content: space-evenly;
 
   article {
-    // text-wrap: balance; FALTA POR VERRRRRRRRRRRRR
+    // text-wrap: balance;
 
     position: relative;
     box-shadow: 0 10px 100px rgba(0, 0, 0, 0.5);
@@ -21,7 +21,7 @@
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 5;
 
-      overflow: hidden;
+      overflow-y: hidden;
 
       margin-bottom: 4em;
     }
@@ -85,11 +85,11 @@
     transform: scale(1.05);
   }
 
-  // article:active h2 {
-  //   color: pink;
-  // }
+  article:active h2 {
+    color: pink;
+  }
 
-  // article:active ~ article {
-  //   background-color: pink;
-  // }
+  article:active ~ article {
+    background-color: pink;
+  }
 }

@@ -39,16 +39,17 @@
       }
 
       .vertical {
-        text-transform: uppercase;
         writing-mode: vertical-lr;
         text-orientation: upright;
+
+        text-transform: uppercase;
         text-shadow: 0 0 10px white;
         font-size: 0.6em;
         padding: 0 5em;
       }
 
       p::-webkit-scrollbar {
-        width: 1em;
+        width: 1rem;
         background-color: rgba(255, 255, 255, 0.5);
       }
 

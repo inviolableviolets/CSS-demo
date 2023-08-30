@@ -11,22 +11,15 @@ export default function Header() {
         <img src={isdi} alt="ISDI star icon" />
         <ul>
           <li>
-            <a href="">Paragraphs</a>
+            <a href="">Intersection Observer</a>
           </li>
           <li>
-            <a href="">Typewriter Effect</a>
+            <a href="">Media Theme</a>
           </li>
           <li>
-            <a href="">Scrollbar Edit</a>
-          </li>
-          <li>
-            <a href="">Cards</a>
-          </li>
-          <li>
-            <a href="">Gallery</a>
-          </li>
-          <li>
-            <a href="">Mix Blend</a>
+            <a href="#pabajo" id="parriba">
+              ↓ Down
+            </a>
           </li>
         </ul>
       </section>

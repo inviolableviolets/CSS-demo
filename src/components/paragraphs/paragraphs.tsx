@@ -1,6 +1,6 @@
 import style from './paragraphs.module.scss';
 
-export default function Scroll() {
+export default function Paragraphs() {
   return (
     <main className={style.container}>
       <article>

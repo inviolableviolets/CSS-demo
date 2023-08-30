@@ -47,8 +47,10 @@
       font-size: 1.2em;
       text-transform: uppercase;
 
+      animation: name duration timing-function delay iteration-count direction
+        fill-mode;
       animation: typing 3s steps(57), blink 0.5s step-end infinite alternate;
-      transform: perspective(20px) rotateX(2deg);
+      // transform: perspective(2px) rotateX(2deg); // Star Wars
     }
   }
 }
