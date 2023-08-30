@@ -3,7 +3,7 @@ import isdi from '../../assets/svg/isdiwhite.svg';
 
 export default function Header() {
   return (
-    <header className={style.header}>
+    <header className={style.header} id="header">
       <h1>
         CSS tricks <span>&</span> backflips
       </h1>
@@ -14,12 +14,10 @@ export default function Header() {
             <a href="">Intersection Observer</a>
           </li>
           <li>
-            <a href="">Media Theme</a>
+            <a href="#theme">Media Theme</a>
           </li>
           <li>
-            <a href="#pabajo" id="parriba">
-              ↓ Down
-            </a>
+            <a href="">Refresh</a>
           </li>
         </ul>
       </section>

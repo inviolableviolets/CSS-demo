@@ -1,3 +1,4 @@
+import Flip from '../flip/flip';
 import style from './blend.module.scss';
 
 export default function Blend() {
@@ -7,6 +8,7 @@ export default function Blend() {
         <span>Mix blend mode</span>
         <div className={style['blended-image']}></div>
       </div>
+      <Flip />
     </main>
   );
 }

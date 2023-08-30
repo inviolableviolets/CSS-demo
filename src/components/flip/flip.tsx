@@ -2,7 +2,7 @@ import style from './flip.module.scss';
 
 export default function Flip() {
   return (
-    <a className={style['flip-container']} href="#parriba" id="pabajo">
+    <a className={style['flip-container']} href="#header" id="down">
       <div className={style.card}>
         <div className={style.front}>
           <p>↑</p>

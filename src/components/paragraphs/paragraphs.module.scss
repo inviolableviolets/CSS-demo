@@ -72,7 +72,7 @@
 
     button:active {
       box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
-      color: steelblue;
+      color: #6494c2;
       transition: 0.2s;
     }
 
@@ -85,11 +85,11 @@
     transform: scale(1.05);
   }
 
-  article:active h2 {
-    color: pink;
-  }
+  // article:active h2 {
+  //   color: pink;
+  // }
 
-  article:active ~ article {
-    background-color: pink;
-  }
+  // article:active ~ article {
+  //   background-color: pink;
+  // }
 }

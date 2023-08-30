@@ -1,10 +1,7 @@
 .flip-container {
   position: absolute;
-  right: 8em;
-  transform: translateY(-2em);
+  bottom: -10em;
   background-color: transparent;
-  display: flex;
-  justify-content: end;
   width: 7rem;
 
   .card {
@@ -29,21 +26,27 @@
 
   .front {
     background-color: rgba(255, 255, 255);
-    box-shadow: 0 0 10px white;
     color: black;
     font-size: 3rem;
   }
+
   .back {
-    background-color: black;
-    box-shadow: 0 0 10px black;
-    color: white;
-    font-size: 1.6em;
+    background-color: white;
+    color: black;
+    font-size: 1em;
     transform: rotateY(180deg);
     letter-spacing: 0.1rem;
     text-transform: uppercase;
+    p {
+      width: 4em;
+    }
   }
 }
 
 .flip-container:hover .card {
   transform: rotateY(180deg);
+}
+
+.flip-container:active .card {
+  box-shadow: 0 0 30px white;
 }

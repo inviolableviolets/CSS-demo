@@ -1,0 +1,33 @@
+$light-mode: (
+  background: linear-gradient(beige, white),
+  primary: black,
+  secondary: steelblue,
+  details: rgb(141, 68, 82),
+);
+
+$dark-mode: (
+  background: linear-gradient(rgb(33, 33, 33), black),
+  primary: white,
+  secondary: beige,
+  details: pink,
+);
+
+@function getColor($color-name) {
+  @return var(--color-#{$color-name});
+}
+
+:root {
+  @each $name, $color in $light-mode {
+    --color-#{$name}: #{$color};
+  }
+  --theme: 'light';
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @each $name, $color in $dark-mode {
+      --color-#{$name}: #{$color};
+    }
+    --theme: 'dark';
+  }
+}
