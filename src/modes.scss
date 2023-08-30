@@ -1,18 +1,43 @@
+// Así se haría con CSS puro.
+
+// :root {
+//   --color-bg-color: linear-gradient(beige, white);
+//   --color-primary: black;
+//   --color-secondary: steelblue;
+//   --color-details: rgb(141, 68, 82);
+//   --theme: 'light';
+// }
+
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --color-bg-color: linear-gradient(rgb(33, 33, 33), black);
+//     --color-primary: white;
+//     --color-secondary: beige;
+//     --color-details: pink;
+//     --theme: 'dark';
+//   }
+// }
+
+// .example-element {
+//   background: var(--color-bg-color);
+//   color: var(--color-primary);
+// }
+
 $light-mode: (
-  background: linear-gradient(beige, white),
+  bg-color: linear-gradient(beige, white),
   primary: black,
   secondary: steelblue,
   details: rgb(141, 68, 82),
 );
 
 $dark-mode: (
-  background: linear-gradient(rgb(33, 33, 33), black),
+  bg-color: linear-gradient(rgb(33, 33, 33), black),
   primary: white,
   secondary: beige,
   details: pink,
 );
 
-@function getColor($color-name) {
+@function pick($color-name) {
   @return var(--color-#{$color-name});
 }
 

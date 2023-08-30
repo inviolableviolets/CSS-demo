@@ -2,33 +2,31 @@
 
 .theme {
   position: relative;
-  background: getColor(background);
-  height: 90vh;
   display: grid;
   place-content: center;
-  border-top: 10vh solid getColor(primary);
+  height: 90vh;
   padding: 0 8em;
+  background: pick(bg-color);
+  border-top: 10vh solid pick(primary);
 
   h2 {
     font-size: 10rem;
-    color: getColor(primary);
-    text-shadow: 0 0 5px getColor(primary);
+    color: pick(primary);
+    text-shadow: 0 0 5px pick(primary);
   }
 
-  h2 {
-    &:before {
-      content: var(--theme) ' ';
-      color: getColor(details);
-      text-transform: capitalize;
-    }
+  h2:before {
+    content: var(--theme) ' ';
+    color: pick(details);
+    text-transform: capitalize;
   }
 
   p {
-    color: getColor(primary);
     margin-top: 2em;
     max-width: 100%;
     font-size: 1.1rem;
     line-height: 1.5em;
+    color: pick(primary);
   }
 
   .icons {
@@ -36,17 +34,17 @@
     justify-content: flex-end;
 
     span:first-child {
-      color: getColor(secondary);
+      color: pick(secondary);
     }
-  }
 
-  span {
-    font-size: 4em;
-    height: 2em;
-    aspect-ratio: 1/1;
-    text-align: center;
-    color: getColor(details);
-    text-shadow: 0 0 5px getColor(primary);
-    transition: all 0.2s;
+    span {
+      font-size: 4em;
+      height: 2em;
+      aspect-ratio: 1/1;
+      text-align: center;
+      transition: all 0.2s;
+      color: pick(details);
+      text-shadow: 0 0 5px pick(primary);
+    }
   }
 }
