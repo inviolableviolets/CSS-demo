@@ -1,21 +1,21 @@
 .blend {
-  display: grid;
-  place-items: center;
   position: relative;
+  display: flex;
+  justify-content: space-between;
   margin: 5em 0 10em 0;
-  height: 50vh;
+  height: 100%;
+  width: 100%;
 
   .blended-text {
-    width: 80vw;
     display: flex;
     align-items: center;
     height: 10em;
-
+    margin: 0 10em;
     span {
       // position: fixed;
       // inset: 4em 0;
       // text-align: left;
-      font-size: 4.5em;
+      font-size: 4.5vw;
       text-transform: uppercase;
       letter-spacing: 0.2em;
 
@@ -33,33 +33,25 @@
   }
 
   .blended-image {
-    position: relative;
-    display: flex;
-    transform: translate(6em);
+    position: absolute;
+    right: 5em;
     border-radius: 50%;
     height: 20rem;
     aspect-ratio: 1/1;
-
     text-transform: uppercase;
     color: black;
-    display: grid;
-    place-content: center;
     box-shadow: 0 0 100px white;
 
     border: 1em solid white;
 
-    background-color: rgb(56, 105, 103);
+    // background-color: rgb(192, 0, 225);
 
     background-image: url('https://www.providencejournal.com/gcdn/authoring/2018/05/04/NPRJ/ghows-PJ-6b687f15-ddfb-2b63-e053-0100007f2d77-c9d8700f.jpeg?width=660&height=494&fit=crop&format=pjpg&auto=webp');
     background-position: -5em 0;
     background-repeat: no-repeat;
     background-size: cover;
 
-    background-blend-mode: overlay;
-
-    animation: expand 1s infinite;
-    animation-delay: 0.5s, 5s;
-    animation-iteration-count: infinite;
+    background-blend-mode: screen;
 
     filter: grayscale(100%) contrast(120%);
   }
